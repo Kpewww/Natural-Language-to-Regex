@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    margin-bottom: 20px;
+}
+
+.drag-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.drag-box {
+    background-color: #52b69a;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.drag-box:active {
+    opacity: 0.6;
+}
+
+.custom-input {
+    margin-bottom: 20px;
+}
+
+.custom-input input {
+    padding: 10px;
+    border: 2px solid #52b69a;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.custom-input button {
+    padding: 10px;
+    background-color: #52b69a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-input button:hover {
+    background-color: #52b69a;
+}
+
+.drop-area {
+    background-color: #ffffff;
+    border: 2px dashed #cccccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sortable-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.sortable-container div {
+    background-color: #42a5f5;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: move;
+}
+
+.regex-output {
+    font-weight: bold;
+}
+
+.drop-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.5;
+    text-align: center;
+    width: 100%;
+}
+
+.sortable-container > div {
+    white-space: nowrap;
+}
