@@ -50,7 +50,7 @@ To set up this project locally, follow these steps:
 
 ## 📸 Screenshots
 
-![Screenshot](Web Screenshot.png)
+![Screenshot](Web_Screenshot.png)
 
 ## 🐛 Reporting Issues
 
