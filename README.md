@@ -55,6 +55,7 @@ To set up this project locally, follow these steps:
 ## 🐛 Reporting Issues
 
 If you encounter any issues or have suggestions for improvement, feel free to open an issue on the [GitHub repository](https://github.com/Kpewww/Natural-Language-to-Regex/issues).
+I am really appreciate to have your advice and make the website better!
 
 ## 📄 License
 
