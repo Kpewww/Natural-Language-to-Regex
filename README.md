@@ -50,7 +50,7 @@ To set up this project locally, follow these steps:
 
 ## 📸 Screenshots
 
-![Screenshot](![image](https://github.com/Kpewww/Natural-Language-to-Regex/assets/131501695/8e43d939-5161-45b1-805d-47414ba6bfdf))
+![Screenshot]()
 
 ## 🐛 Reporting Issues
 
