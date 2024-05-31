@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const dropText = document.querySelector('.drop-text');
     const customTextInput = document.getElementById('custom-text');
     const addCustomTextButton = document.getElementById('add-custom-text');
+    const errorMessage = document.getElementById('error-message');
 
     dragBoxes.forEach(box => {
         box.addEventListener('dragstart', dragStart);
@@ -36,7 +37,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function drop(event) {
         event.preventDefault();
         const data = event.dataTransfer.getData('text/plain');
-        addSortableItem(data);
+        errorMessage.textContent = ''; // Clear any existing error message
+
+        if (data === '{') {
+            const char = prompt('Enter the character to be repeated (one character only):');
+            const number = prompt('Enter the number for exact repetition (integer only):');
+            if (char.length === 1 && !isNaN(number)) {
+                addSortableItem(`${char}{${number}}`);
+            } else {
+                errorMessage.textContent = 'Invalid input. Ensure character is one character long and number is an integer.';
+            }
+        } else if (data === 'range') {
+            const leftSide = prompt('Enter the left side of the range (one character only):');
+            const rightSide = prompt('Enter the right side of the range (one character only):');
+            if (leftSide.length === 1 && rightSide.length === 1) {
+                addSortableItem(`[${leftSide}-${rightSide}]`);
+            } else {
+                errorMessage.textContent = 'Invalid input. Ensure both sides of the range are one character long.';
+            }
+        } else {
+            addSortableItem(data);
+        }
         updateOutput();
         toggleDropText();
     }

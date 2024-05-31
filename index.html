@@ -13,13 +13,32 @@
     <div class="container">
         <h1 class="title">Natural Language to Regex</h1>
         <div class="instructions">
-            <p>Drag and drop the boxes to the target to form regex patterns.</p>
+            <h2>What is Regex?</h2>
+            <p>Regex, or regular expressions, are sequences of characters that define a search pattern. They are commonly used for string matching and manipulation. For example, to find all digits in a string, you can use the regex <code>\d</code>.</p>
+            <h2>How to Use This Website</h2>
+            <p>This tool allows you to build regex patterns using a drag-and-drop interface. Follow these steps:</p>
+            <ul>
+                <li>Drag and drop the boxes below to the target area to form regex patterns.</li>
+                <li>You can add custom text or characters by entering them in the input box and clicking "Add".</li>
+                <li>Double-click on an item in the target area to remove it.</li>
+                <li>The regex pattern will be displayed below the target area as you build it.</li>
+            </ul>
         </div>
         <div class="drag-boxes">
-            <div class="drag-box" draggable="true" data-regex="\d">Numbers</div>
+            <div class="drag-box" draggable="true" data-regex="\d">Any Numbers</div>
             <div class="drag-box" draggable="true" data-regex=".*">Any</div>
-            <div class="drag-box" draggable="true" data-regex="[a-z]">Lowercase Letters</div>
-            <div class="drag-box" draggable="true" data-regex="[A-Z]">Uppercase Letters</div>
+            <div class="drag-box" draggable="true" data-regex="[a-z]">Any Lowercase Letters</div>
+            <div class="drag-box" draggable="true" data-regex="[A-Z]">Any Uppercase Letters</div>
+            <div class="drag-box" draggable="true" data-regex="\s">Whitespace</div>
+            <div class="drag-box" draggable="true" data-regex="\w">Any Word Character</div>
+            <div class="drag-box" draggable="true" data-regex="\W">Any Non-Word Character</div>
+            <div class="drag-box" draggable="true" data-regex="\D">Any Non-Digit</div>
+            <div class="drag-box" draggable="true" data-regex="[^]">Not Specific Left Characters</div>
+            <div class="drag-box" draggable="true" data-regex="+">Make Left Character Repeated at Least Once</div>
+            <div class="drag-box" draggable="true" data-regex="*">Make Left Character Repeated Any Times</div>
+            <div class="drag-box" draggable="true" data-regex="?">Make Left Character Optional</div>
+            <div class="drag-box" draggable="true" data-regex="{">Exact Number of Characters (a{n})</div>
+            <div class="drag-box" draggable="true" data-regex="range">Character Range (a-z0-9)</div>
             <!-- Add more boxes as needed -->
         </div>
         <div class="custom-input">
@@ -35,6 +54,7 @@
         <div class="regex-output">
             <p>Regex Output: <span id="regex-output"></span></p>
         </div>
+        <div class="error-message" id="error-message"></div>
     </div>
 
     <script src="script.js"></script>

@@ -27,6 +27,7 @@ body {
 .drag-boxes {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -37,6 +38,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
     user-select: none;
+    margin: 5px;
+    min-width: 120px;
+    text-align: center;
 }
 
 .drag-box:active {
@@ -64,7 +68,7 @@ body {
 }
 
 .custom-input button:hover {
-    background-color: #52b69a;
+    background-color: #3d8b73;
 }
 
 .drop-area {
@@ -116,4 +120,9 @@ body {
 
 .sortable-container > div {
     white-space: nowrap;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
 }
